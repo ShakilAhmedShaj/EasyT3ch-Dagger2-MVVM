@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.easyt3ch.dagger2.ui.home.result.PostResultViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootItemView"
+        style="@style/AppTheme.Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEH"
+            app:layout_constraintStart_toStartOf="@+id/guidelineBV"
+            app:layout_constraintTop_toTopOf="@+id/guidelineBH"
+            app:setYtThumb="@{viewModel.item.video_id}" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            style="@style/MyAppTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{viewModel.item.video_title ?? @string/string_null}"
+            android:textColor="@color/colorAccent"
+            android:textDirection="locale"
+            android:textSize="@dimen/Medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvAuthor"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEV"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineBH"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAuthor"
+            style="@style/MyAppTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{viewModel.item.category_name ?? @string/string_null}"
+            android:textColor="@color/colorSecondaryTextWhite"
+            android:textDirection="locale"
+            android:textSize="@dimen/Small"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEH"
+            app:layout_constraintEnd_toStartOf="@id/tvDate"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="Category" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDate"
+            style="@style/MyAppTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_success"
+            android:textDirection="ltr"
+            android:textSize="@dimen/Small"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEH"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEV"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="@{viewModel.item.video_date}" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorDividerDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

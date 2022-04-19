@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Easy T3ch</string>
+
+    <string name="home">Home</string>
+    <string name="position">position</string>
+    <string name="string_null">-</string>
+</resources>

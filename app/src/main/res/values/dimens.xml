@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Nano">11sp</dimen>
+    <dimen name="Small">12sp</dimen>
+    <dimen name="Medium">14sp</dimen>
+    <dimen name="Large">16sp</dimen>
+    <dimen name="XLarge">18sp</dimen>
+    <dimen name="XXLarge">20sp</dimen>
+    <dimen name="XXXLarge">24sp</dimen>
+
+    <dimen name="shape_radius">8dp</dimen>
+    <dimen name="button_size">54dp</dimen>
+    <dimen name="circle_progress">50dp</dimen>
+</resources>
