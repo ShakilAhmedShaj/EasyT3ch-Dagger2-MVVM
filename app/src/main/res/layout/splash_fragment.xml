@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.easyt3ch.dagger2.ui.splash.SplashViewModel" />
+            type="com.easyt3ch.hilt.ui.splash.SplashViewModel" />
 
     </data>
 

@@ -7,11 +7,11 @@
 
         <variable
             name="viewModel"
-            type="com.easyt3ch.dagger2.ui.home.HomeViewModel" />
+            type="com.easyt3ch.hilt.ui.home.HomeViewModel" />
 
         <variable
             name="viewState"
-            type="com.easyt3ch.dagger2.ui.home.HomeViewState" />
+            type="com.easyt3ch.hilt.ui.home.HomeViewState" />
     </data>
 
 

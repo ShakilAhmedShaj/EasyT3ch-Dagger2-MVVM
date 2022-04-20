@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.easyt3ch.dagger2.ui.splash.SplashFragment"
+        android:name="com.easyt3ch.hilt.ui.splash.SplashFragment"
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.easyt3ch.dagger2.ui.home.HomeFragment"
+        android:name="com.easyt3ch.hilt.ui.home.HomeFragment"
         android:label="SourceFragment">
         <!--        <action-->
         <!--            android:id="@+id/action_sourceFragment_to_articleFragment"-->

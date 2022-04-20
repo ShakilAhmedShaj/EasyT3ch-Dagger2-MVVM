@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.easyt3ch.dagger2.ui.home.result.PostResultViewModel" />
+            type="com.easyt3ch.hilt.ui.home.result.PostResultViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
