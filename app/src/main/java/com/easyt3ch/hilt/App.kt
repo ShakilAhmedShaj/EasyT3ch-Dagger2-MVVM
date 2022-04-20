@@ -1,28 +1,19 @@
 package com.easyt3ch.hilt
 
 import androidx.multidex.MultiDexApplication
-import com.easyt3ch.hilt.di.AppInjector
 import com.easyt3ch.hilt.utils.AppDebugTree
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
-import javax.inject.Inject
 
 /**
  * Created by Shakil Ahmed Shaj on 09,April,2022.
  */
 
-class App : MultiDexApplication(), HasAndroidInjector {
-
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
-
-    override fun androidInjector() = androidInjector
+@HiltAndroidApp
+class App : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
-        AppInjector.init(this)
 
         initToolsForDebugOnly()
     }

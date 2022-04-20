@@ -1,29 +1,27 @@
 package com.easyt3ch.hilt.ui.splash
 
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.easyt3ch.hilt.R
 import com.easyt3ch.hilt.core.base.BaseFragment
 import com.easyt3ch.hilt.databinding.SplashFragmentBinding
-import com.easyt3ch.hilt.di.Injectable
 import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
-class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>
-    (SplashViewModel::class.java), Injectable {
+class SplashFragment : BaseFragment<SplashFragmentBinding, SplashViewModel>() {
 
     var disposable: Disposable? = null
 
-    override fun getLayoutRes() = R.layout.splash_fragment
 
-    override fun initViewModel() {
-        mBinding.viewModel = viewModel
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun init() {
-        super.init()
+
         Timber.i("in `SplashFragment`")
 
         disposable = Completable.timer(2, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
@@ -43,6 +41,12 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>
     override fun onDestroy() {
         disposable?.dispose()
         super.onDestroy()
+    }
+
+    override val viewModel: SplashViewModel by viewModels()
+
+    override fun getViewBinding(): SplashFragmentBinding {
+        return SplashFragmentBinding.inflate(layoutInflater)
     }
 
 }

@@ -1,33 +1,20 @@
 package com.easyt3ch.hilt.ui.main
 
-import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.easyt3ch.hilt.R
 import com.easyt3ch.hilt.core.base.BaseActivity
 import com.easyt3ch.hilt.databinding.ActivityMainBinding
-import com.easyt3ch.hilt.utils.callbacks.ActivityResultCallback
 import com.easyt3ch.hilt.utils.extensions.hide
 import com.easyt3ch.hilt.utils.extensions.show
-
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
-import javax.inject.Inject
 
-class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>
-    (MainActivityViewModel::class.java), HasAndroidInjector {
+@AndroidEntryPoint
+class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>() {
 
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
-    private lateinit var activityResultCallback: ActivityResultCallback
-
-    override fun androidInjector() = androidInjector
-
-    override fun initViewModel(viewModel: MainActivityViewModel) {
-        binding.viewModel = viewModel
-    }
 
     override fun getLayoutRes() = R.layout.activity_main
 
@@ -65,8 +52,5 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>
         return findNavController(R.id.container_fragment).navigateUp()
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        activityResultCallback.onResult(requestCode, resultCode, data)
-    }
+    override val viewModel: MainActivityViewModel by viewModels()
 }

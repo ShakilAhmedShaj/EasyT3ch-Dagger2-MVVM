@@ -3,46 +3,41 @@ package com.easyt3ch.hilt.ui.home
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.easyt3ch.hilt.R
 import com.easyt3ch.hilt.core.Constants
 import com.easyt3ch.hilt.core.base.BaseFragment
 import com.easyt3ch.hilt.databinding.HomeFragmentBinding
-import com.easyt3ch.hilt.di.Injectable
 import com.easyt3ch.hilt.domain.model.Post
 import com.easyt3ch.hilt.domain.usecase.HomeVideoUseCase
 import com.easyt3ch.hilt.ui.home.result.PostResultAdapter
 import com.easyt3ch.hilt.utils.extensions.observeWith
 import com.easyt3ch.hilt.utils.isNetworkAvailable
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+@AndroidEntryPoint
+class HomeFragment : BaseFragment<HomeFragmentBinding, HomeViewModel>() {
 
-class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>
-    (HomeViewModel::class.java), Injectable {
 
-    override fun getLayoutRes() = R.layout.home_fragment
-
-    override fun initViewModel() {
-        mBinding.viewModel = viewModel
-    }
-
-    override fun init() {
-        super.init()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         Timber.i("in `HomeFragment`")
 
         initAdapter()
 
         setViewModelObserver()
-
     }
 
     private fun setViewModelObserver() {
         viewModel.setHomeVideoParams(getParams())
 
         viewModel.getHomeVideoViewState().observeWith(viewLifecycleOwner) {
-            mBinding.viewState = it
+            binding.viewState = it
             Timber.d("Datas: %s", it.data)
             it.data?.let { results -> initPostResultAdapter(results) }
         }
@@ -56,15 +51,15 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>
 
         val layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
-        mBinding.recyclerView.adapter = adapter
-        mBinding.recyclerView.layoutManager = layoutManager
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = layoutManager
 
         viewModel.setHomeVideoParams(getParams())
 
     }
 
     private fun initPostResultAdapter(list: List<Post>) {
-        (mBinding.recyclerView.adapter as PostResultAdapter).submitList(list)
+        (binding.recyclerView.adapter as PostResultAdapter).submitList(list)
     }
 
     private fun getParams(): HomeVideoUseCase.HomeVideoParams {
@@ -89,5 +84,12 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>
         }
 
 
+    }
+
+    override val viewModel: HomeViewModel by viewModels()
+
+
+    override fun getViewBinding(): HomeFragmentBinding {
+        return HomeFragmentBinding.inflate(layoutInflater)
     }
 }

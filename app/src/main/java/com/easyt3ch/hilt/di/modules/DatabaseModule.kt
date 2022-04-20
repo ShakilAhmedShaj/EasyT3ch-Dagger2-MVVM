@@ -4,6 +4,9 @@ import android.content.Context
 import com.easyt3ch.hilt.db.AppDatabase
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
@@ -11,16 +14,18 @@ import javax.inject.Singleton
  */
 
 @Module
-class DatabaseModule {
+@InstallIn(SingletonComponent::class)
+object DatabaseModule {
 
     @Singleton
     @Provides
-    fun getDatabase(context: Context): AppDatabase {
+    fun getDatabase(@ApplicationContext context: Context): AppDatabase {
         return AppDatabase.getInstance(context)
     }
 
     @Provides
     @Singleton
     fun providesHomeVideoDao(db: AppDatabase) = db.homeVideoDao()
+
 
 }
