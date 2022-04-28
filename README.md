@@ -3,86 +3,72 @@
 The following is a high level overview of relevant files and folders.
 
 ```
-Easy T3ch - Dagger 2 - MVVM
+Easy T3ch - Hilt - MVVM
 .
-easyt3ch
-└── dagger2
-    ├── App.kt
-    ├── core
-    │   ├── Constants.kt
-    │   ├── DataBindingAdapter.kt
-    │   └── base
-    │       ├── BaseActivity.kt
-    │       ├── BaseAdapter.kt
-    │       ├── BaseFragment.kt
-    │       ├── BaseViewHolder.kt
-    │       └── BaseViewModel.kt
-    ├── db
-    │   ├── AppDatabase.kt
-    │   └── dao
-    │       └── HomeVideoDao.kt
-    ├── di
-    │   ├── AppInjector.kt
-    │   ├── Injectable.kt
-    │   ├── ViewModelFactory.kt
-    │   ├── component
-    │   │   └── ApplicationComponent.kt
-    │   ├── key
-    │   │   ├── ActivityKey.kt
-    │   │   └── ViewModelKey.kt
-    │   ├── modules
-    │   │   ├── ActivityModule.kt
-    │   │   ├── ApplicationModule.kt
-    │   │   ├── DatabaseModule.kt
-    │   │   ├── FragmentBuildersModule.kt
-    │   │   ├── NetModule.kt
-    │   │   └── ViewModelModule.kt
-    │   └── scope
-    │       └── ActivityScope.kt
-    ├── domain
-    │   ├── VideoPostApi.kt
-    │   ├── datasource
-    │   │   ├── HomeVideoLocalDataSource.kt
-    │   │   └── HomeVideoRemoteDataSource.kt
-    │   ├── model
-    │   │   ├── Image.kt
-    │   │   ├── Post.kt
-    │   │   ├── VideoDetails.kt
-    │   │   └── VideoList.kt
-    │   └── usecase
-    │       └── HomeVideoUseCase.kt
-    ├── repos
-    │   ├── HomeVideoRepository.kt
-    │   └── NetworkBoundResource.kt
-    ├── ui
-    │   ├── home
-    │   │   ├── HomeFragment.kt
-    │   │   ├── HomeViewModel.kt
-    │   │   ├── HomeViewState.kt
-    │   │   └── result
-    │   │       ├── PostResultAdapter.kt
-    │   │       └── PostResultViewModel.kt
-    │   ├── main
-    │   │   ├── MainActivity.kt
-    │   │   └── MainActivityViewModel.kt
-    │   └── splash
-    │       ├── SplashFragment.kt
-    │       └── SplashViewModel.kt
-    └── utils
-        ├── AppDebugTree.kt
-        ├── AppGlideModule.kt
-        ├── ContextExt.kt
-        ├── UseCaseLiveData.kt
-        ├── callbacks
-        │   └── ActivityResultCallback.kt
+└── easyt3ch
+    └── hilt
+        ├── App.kt
+        ├── core
+        │   ├── Constants.kt
+        │   ├── DataBindingAdapter.kt
+        │   └── base
+        │       ├── BaseActivity.kt
+        │       ├── BaseAdapter.kt
+        │       ├── BaseFragment.kt
+        │       ├── BaseViewHolder.kt
+        │       └── BaseViewModel.kt
+        ├── db
+        │   ├── AppDatabase.kt
+        │   └── dao
+        │       └── HomeVideoDao.kt
+        ├── di
+        │   └── modules
+        │       ├── DatabaseModule.kt
+        │       └── NetModule.kt
         ├── domain
-        │   ├── RateLimiter.kt
-        │   ├── Resource.kt
-        │   └── Status.kt
-        └── extensions
-            ├── GlideExt.kt
-            ├── LiveDataExt.kt
-            └── ViewExt.kt
+        │   ├── VideoPostApi.kt
+        │   ├── datasource
+        │   │   ├── HomeVideoLocalDataSource.kt
+        │   │   └── HomeVideoRemoteDataSource.kt
+        │   ├── model
+        │   │   ├── Image.kt
+        │   │   ├── Post.kt
+        │   │   ├── VideoDetails.kt
+        │   │   └── VideoList.kt
+        │   └── usecase
+        │       └── HomeVideoUseCase.kt
+        ├── repos
+        │   ├── HomeVideoRepository.kt
+        │   └── NetworkBoundResource.kt
+        ├── ui
+        │   ├── home
+        │   │   ├── HomeFragment.kt
+        │   │   ├── HomeViewModel.kt
+        │   │   ├── HomeViewState.kt
+        │   │   └── result
+        │   │       ├── PostResultAdapter.kt
+        │   │       └── PostResultViewModel.kt
+        │   ├── main
+        │   │   ├── MainActivity.kt
+        │   │   └── MainActivityViewModel.kt
+        │   └── splash
+        │       ├── SplashFragment.kt
+        │       └── SplashViewModel.kt
+        └── utils
+            ├── AppDebugTree.kt
+            ├── AppGlideModule.kt
+            ├── ContextExt.kt
+            ├── UseCaseLiveData.kt
+            ├── callbacks
+            │   └── ActivityResultCallback.kt
+            ├── domain
+            │   ├── RateLimiter.kt
+            │   ├── Resource.kt
+            │   └── Status.kt
+            └── extensions
+                ├── GlideExt.kt
+                ├── LiveDataExt.kt
+                └── ViewExt.kt
 ```
 
 ## License
