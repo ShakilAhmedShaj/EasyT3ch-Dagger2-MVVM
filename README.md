@@ -1,10 +1,69 @@
+<h2 style="margin-bottom: 0;" align="center">Easy T3ch - HILT - MVVM</h2>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/15268903/166077463-ee3084ca-92a6-445d-937b-0b5d9cfd6b91.png" height="100" width="100">
+<h3 style="margin-top: 0;" align="center">Simple app built on top of Dagger Hilt & other best practices like MVVM, Navigation, RxJava, Room, Databinding, Offline Caching.</h3>
+</p>
+	
+## App Screenshots
+<table>
+  <tr>
+     <td align="center">Splash</td>
+     <td align="center">Home</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/15268903/166077758-c295f0d8-b2be-4a7c-96c1-5d44c5942358.png" height="400" width="200"></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/15268903/166077349-3e552224-86b2-4f57-82b8-a4f71bb6ae6e.png" height="400" width="200"></td>
+  </tr>
+ </table>
+ <br>
+
+
+## Features
+
+* Loads data from rest api
+* Play Videos from youtube
+
+### Built With
+
+* Android Studio Bumblebee | 2021.1.1 The latest version can be downloaded from [here](https://developer.android.com/studio/)
+* Build gradle 3.6.4
+* Android SDK 32
+* Kotlin Version 1.6.20
+
+## Libraries  & Tools Used
+
+- [Dagger Hilt](https://dagger.dev/hilt/)
+- [RxJava](https://github.com/ReactiveX/RxJava)   
+- [RxAndroid](https://github.com/ReactiveX/RxAndroid)   
+- [RxKotlin](https://github.com/ReactiveX/RxKotlin)    
+- [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/)   
+- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)   
+- [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)   
+- [Data Binding](https://developer.android.com/topic/libraries/data-binding)   
+- [RoomDB](https://developer.android.com/topic/libraries/architecture/room)   
+- [Retrofit](https://square.github.io/retrofit/)   
+- [OkHttp](https://github.com/square/okhttp)   
+- [Glide](https://github.com/bumptech/glide)   
+- [Material Design](https://material.io/develop/android/docs/getting-started/)  
+
+### Install the apk
+
+<a href="https://static.shaj.dev/apks/EasyT3ch-Dagger2.apk"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
+
+Go to the following [link](https://static.shaj.dev/apks/EasyT3ch-Dagger2.apk) to download the app.
+
+
+## Architecture
+The app uses MVVM [Model-View-ViewModel] architecture to have a unidirectional flow of data, separation of concern and a lot more.
+
+<img src="https://user-images.githubusercontent.com/15268903/166078769-ea0920be-322c-4ff6-9c9f-1b78f899c580.png">
+
 ### Directory Structure
 
 The following is a high level overview of relevant files and folders.
 
 ```
-Easy T3ch - Hilt - MVVM
-.
 └── easyt3ch
     └── hilt
         ├── App.kt

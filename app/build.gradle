@@ -65,8 +65,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
 
     // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-alpha04'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-alpha04'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-beta01'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-beta01'
 
     // Room
     implementation 'androidx.room:room-runtime:2.4.2'
