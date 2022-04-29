@@ -49,9 +49,9 @@
 
 ### Install the apk
 
-<a href="https://static.shaj.dev/apks/EasyT3ch-Dagger2.apk"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
+<a href="https://link.shaj.dev/ET-HILT"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
 
-Go to the following [link](https://static.shaj.dev/apks/EasyT3ch-Dagger2.apk) to download the app.
+Go to the following [link](https://link.shaj.dev/ET-HILT) to download the app.
 
 
 ## Architecture
