@@ -5,7 +5,7 @@
 <h3 style="margin-top: 0;" align="center">Simple app built on top of Dagger 2 & other best practices like MVVM, Navigation, RxJava, Room, Databinding, Offline Caching.</h3>
 </p>
 
-> Same project is available on top of `Dagger Hilt` in [this repository](https://link.shaj.dev/EasyT3ch-Hilt).
+> Same project is available on top of `Dagger Hilt` in [this repository](https://link.shaj.dev/et-hilt-repo).
 
 
 ## App Screenshots
@@ -52,9 +52,9 @@
 
 ### Install the apk
 
-<a href="https://link.shaj.dev/EasyT3ch-Dagger2"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
+<a href="https://link.shaj.dev/et-dagger2-apk"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="185" height="70"/></a>
 
-Go to the following [link](https://link.shaj.dev/EasyT3ch-Dagger2) to download the app.
+Go to the following [link](https://link.shaj.dev/et-dagger2-apk) to download the app.
 
 
 ## Architecture
