@@ -7,7 +7,7 @@ package com.easyt3ch.hilt.core
 object Constants {
 
     object NetworkService {
-        const val BASE_URL = "https://apis.shajt3ch.com/apps/channel/v1/"
+        const val BASE_URL = "https://api.shaj.dev/apps/et/v1/"
         const val RATE_LIMITER_TYPE = "data"
 
         const val CLIENT_SECRET = ""
